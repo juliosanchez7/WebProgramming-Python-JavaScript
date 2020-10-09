@@ -1,0 +1,18 @@
+{% extends "network/layout.html" %}
+{% load static %}
+{% block body %}
+{% if user.is_authenticated %}
+<div id="new-post">
+<h4>New Post</h4>
+<form id="compose-form">
+    <textarea class="form-control" id="compose-post" placeholder="What are you thinking"></textarea>
+    <input type="submit" class="btn btn-primary" id="submit"/>
+</form>
+</div>
+{% else %}
+<h2>Log in first</h2>
+{% endif %}
+{% endblock %}
+{% block script %}
+    <script src="{% static 'network/index.js' %}"></script>
+{% endblock %}

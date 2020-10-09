@@ -1,0 +1,116 @@
+$font: Lucida Console, Courier, monospace;
+$font-color: #39CEBC;
+$backgroundIMG: url("background.png");
+#HomeBody {
+  background-position: center;
+  background-size: cover;
+  background-image: $backgroundIMG;
+  min-height: 100%;
+  margin: 30px;
+  padding: 20px;
+  color: $font-color;
+  font-family: $font;
+}
+nav{
+  background-color: #e3f2fd;
+
+}
+.Center{
+   text-align: center;
+   font-family: $font;
+}
+.buttonBlue{
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  background-color: lightblue;
+  font-family: $font;
+
+}
+.buttonBlue:hover {
+  background-color: grey;
+}
+.page{
+  background-color: grey;
+}
+
+#aboutBody{
+  background-image: url("ME.jpg") ;
+  background-size: cover;
+  margin: 10px;
+  padding: 200px;
+  font-family: $font;
+  text-align: center;
+  div{
+    div{
+        div{
+          opacity: 0.7;
+          padding: 40px;
+          background-color: teal;
+          border: 2px solid black;
+          font-weight: bold;
+        }
+    }
+  }
+}
+
+
+#body2aboutPC{
+  background-image: $backgroundIMG;
+  margin: 10px;
+  padding: 200px;
+  font-family: $font;
+  text-align: center;
+  td{
+  padding: 40px;
+  background-color: teal;
+  border: 2px solid black;
+  }
+}
+#body2aboutMovile{
+  background-image: $backgroundIMG;
+  margin: 10px;
+  padding: 200px;
+  font-family: $font;
+  text-align: center;
+  td{
+  padding: 40px;
+  background-color: teal;
+  border: 2px solid black;
+  }
+}
+.BodyWhere{
+  background-image: url("Monserrate.png");
+  background-size: cover;
+  padding: 50px;
+  font-family: $font;
+  font-size: 24px;
+  color: $font-color;
+}
+.BodyWhere > div {
+    padding: 20px;
+}
+.titleWhere{
+  font-family: $font;
+  text-align: center;
+  color: #4CA99D;
+}
+#odWhere  > li{
+  font-size: 40px;
+  font-family: $font;
+}
+#odWhere{
+    color: $font-color;
+    margin: 60px;
+}
+@media screen and (max-width: 800px) {
+  section#body2aboutPC {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 799px) {
+  section#body2aboutMovile {
+    display: none;
+  }
+}

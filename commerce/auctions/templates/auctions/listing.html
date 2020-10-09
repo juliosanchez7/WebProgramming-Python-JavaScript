@@ -1,0 +1,61 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-sm">
+        <img src="{{listing.URL_image}}" alt="listing"  width="300" height=auto>
+        </div>
+        <div class="col-sm">
+        <h2> <strong>{{ listing.title }} </strong></h2>
+        <h3><strong>Current price: ${{ maxlistingBid }}</strong></h3>
+        <h4>Category: {{ listing.category }}</h4>
+        <p>Description:{{ listing.description }} </p>
+        {% if user.is_authenticated %}
+        {% if listing.state == True %}
+        <form action="{% url 'listing' listing.id %}" method="post">
+            {% csrf_token %}
+            {{ formBid }}
+            <input type="submit">
+        </form>
+        <p>{{message}}</p>
+
+        <p>Strating bid: {{ listing.starting_bid }}</p>
+        {% if bandera == "x"%}
+        <form action="{% url 'index' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" name="deleteWL" value="{{ws_id}}">Delete from WatchList</button>
+        </form>
+        {% else%}
+        <form action="{% url 'watchlist' username %}" method="post">
+            {% csrf_token %}
+            <button type="submit" name="buttom" value="{{listing.id}}">Add to WatchList</button>
+        </form>
+        {% endif %}
+        {%if user_eq == True%}
+            <a href="{% url 'closeListing' listing.id %}"> close listing</a>
+        {% endif %}
+        {%endif%}
+        {%if listing.state == False%}
+        {%if username == bidMax.user%}
+        <p>You win this Listing</p>
+        {% endif %}
+        {% endif %}
+        {% else %}
+        <p>Log in for bid</p>
+        {% endif %}
+        <h3>Comments about:</h3>
+        {% for listingComment in listingComments %}
+        <ul>
+            <li> <strong>{{listingComment.user}} :</strong> {{listingComment.comment}}</li>
+        </ul>
+        {%endfor%}
+        {%if user.is_authenticated%}
+        <form action="{% url 'listing' listing.id %}" method="post">
+            {% csrf_token %}
+            {{ formComment }}
+            <input type="submit">
+        </form>
+        {%endif%}
+    </div>
+  
+{% endblock %}

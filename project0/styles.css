@@ -1,0 +1,119 @@
+#HomeBody {
+  background-position: center;
+  background-size: cover;
+  background-image: url("background.png");
+  min-height: 100%;
+  margin: 30px;
+  padding: 20px;
+  color: #39CEBC;
+  font-family: Lucida Console, Courier, monospace;
+}
+
+nav {
+  background-color: #e3f2fd;
+}
+
+.Center {
+  text-align: center;
+  font-family: Lucida Console, Courier, monospace;
+}
+
+.buttonBlue {
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  background-color: lightblue;
+  font-family: Lucida Console, Courier, monospace;
+}
+
+.buttonBlue:hover {
+  background-color: grey;
+}
+
+.page {
+  background-color: grey;
+}
+
+#aboutBody {
+  background-image: url("ME.jpg");
+  background-size: cover;
+  margin: 10px;
+  padding: 200px;
+  font-family: Lucida Console, Courier, monospace;
+  text-align: center;
+}
+#aboutBody div div div {
+  opacity: 0.7;
+  padding: 40px;
+  background-color: teal;
+  border: 2px solid black;
+  font-weight: bold;
+}
+
+#body2aboutPC {
+  background-image: url("background.png");
+  margin: 10px;
+  padding: 200px;
+  font-family: Lucida Console, Courier, monospace;
+  text-align: center;
+}
+#body2aboutPC td {
+  padding: 40px;
+  background-color: teal;
+  border: 2px solid black;
+}
+
+#body2aboutMovile {
+  background-image: url("background.png");
+  margin: 10px;
+  padding: 200px;
+  font-family: Lucida Console, Courier, monospace;
+  text-align: center;
+}
+#body2aboutMovile td {
+  padding: 40px;
+  background-color: teal;
+  border: 2px solid black;
+}
+
+.BodyWhere {
+  background-image: url("Monserrate.png");
+  background-size: cover;
+  padding: 50px;
+  font-family: Lucida Console, Courier, monospace;
+  font-size: 24px;
+  color: #39CEBC;
+}
+
+.BodyWhere > div {
+  padding: 20px;
+}
+
+.titleWhere {
+  font-family: Lucida Console, Courier, monospace;
+  text-align: center;
+  color: #4CA99D;
+}
+
+#odWhere > li {
+  font-size: 40px;
+  font-family: Lucida Console, Courier, monospace;
+}
+
+#odWhere {
+  color: #39CEBC;
+  margin: 60px;
+}
+
+@media screen and (max-width: 800px) {
+  section#body2aboutPC {
+    display: none;
+  }
+}
+@media screen and (min-width: 799px) {
+  section#body2aboutMovile {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

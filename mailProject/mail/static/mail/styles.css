@@ -1,0 +1,83 @@
+textarea {
+    min-height: 400px;
+}
+/*move animation for notifications*/
+@keyframes move {
+    /*displays the notification*/
+    0% {
+        opacity: 1;
+        height: 100%;
+        line-height: 100%;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+    /*Displays the notification*/
+    50% {
+        opacity: 1;
+        height: 100%;
+        line-height: 100%;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+    /*Close notification*/
+    100% {
+        opacity: 0;
+        height: 0px;
+        line-height: 0px;
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+}
+/*Notifications styles*/
+#notification{
+    position: relative;
+    animation-name: move;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+
+}
+/*Row styles for email boxes*/
+
+.row  {		
+    position: relative;	
+    border: 1px solid black;
+	padding: 1.4rem 4.2rem;
+    padding-right: 3.1rem;
+    color: var(--inv);
+	transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);	
+	cursor: pointer;
+    user-select: none;
+    margin-bottom: 10px;
+    text-align: center;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+/*when the mouse is hover it zoom the email box*/
+.row:hover{
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    background-color: rgb(204, 242, 255);
+    transform: scale(1.1);
+}
+/*Create a shadow effect*/
+.hvr-grow-shadow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+  }
+  .hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
